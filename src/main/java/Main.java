@@ -17,6 +17,10 @@ public class Main {
                     scanner.next();
                 }
                 double price = scanner.nextDouble();
+                while (price < 0) {
+                    System.out.print("Введите положительное число: ");
+                    price = scanner.nextDouble();
+                }
                 scanner.nextLine();
                 Product product = new Product(input, price);
                 calculator.add(product);
